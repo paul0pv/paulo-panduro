@@ -1,20 +1,10 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 import AboutMe from '../components/AboutMe.astro';
-import Habilities from '../components/Habilities.astro';
-import PortfolioNav from '../components/PortfolioNav.astro';
+import SkillsSection from '../components/SkillsSection.astro';
 ---
 
 <Layout>
-	<Header/>
-	<div id="container">
-		<main class="mx-auto text-center text-bw-100 mt-10">
-			<AboutMe />
-			<PortfolioNav/>
-			<Habilities/>
-		</main>
-	</div>
-	<Footer/>
+	<AboutMe />
+	<SkillsSection />
 </Layout>

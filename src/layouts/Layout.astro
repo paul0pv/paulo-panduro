@@ -1,3 +1,13 @@
+---
+import Header from '../components/Header.astro';
+import FooterNav from '../components/FooterNav.astro';
+//astro colors: #ff1639 #ff5d01
+//js colors: #F0DB4F
+//node colors: #83CD29
+//django colors: #092e20
+//mongo colors: #439934 #4FAA41 #60B24F #45A538 #46A037 #409433 #4FAA41 #4AA73C #57AE47
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -10,6 +20,26 @@
 		<title>Paulo Panduro</title>
 	</head>
 	<body class="min-h-screen left-0 top-0 bg-gradient-to-br from-bw-950 to-steelBlue-950 font-sans">
-		<slot />
+		<Header/>
+		<main class="mx-auto text-center text-bw-100">
+			<div class="[grid-area:page-content] h-[85vh] p-4 lg:px-20">
+				<slot />
+			</div>
+		</main>
+		<footer class="[grid-area:pages-nav] fixed h-20 w-full left-0 bottom-0 justify-center p-4 lg:px-20">
+			<FooterNav/>
+		</footer>
 	</body>
+
+	<style>
+		main {
+			display: grid;
+			grid-template-areas: 
+			"page-content"
+			"pages-nav";
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr auto;
+
+		}
+	</style>
 </html>
