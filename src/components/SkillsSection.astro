@@ -11,56 +11,114 @@ import PythonIcon from "./icons/PythonIcon.astro";
 import DjangoIcon from "./icons/DjangoIcon.astro";
 import MongoIcon from "./icons/MongoIcon.astro";
 import DockerIcon from "./icons/DockerIcon.astro";
-const elementStyles = "text-lg grid font-bold justify-center items-center text-center px-auto";
+const elementStyles = "text-lg grid font-bold justify-center items-center text-center mx-auto px-auto";
 const titleStyle = "hidden md:block"
 ---
 
 <section>
-    <h2 class="text-3xl font-bold mt-20">Skills</h2>
-    <div class="grid md:grid-cols-2 mt-4 g-8">
-        <div>
-            <h3 class="text-2xl font-bold">Frontend</h3>
-            <ul class="flex justify-around mt-4">
-                <li class={elementStyles}>
-                    <HTMLIcon /> <span class={titleStyle}>HTML</span>
-                </li>
-                <li class={elementStyles}>
-                    <CSSIcon /> <span class={titleStyle}>CSS</span>
-                </li>
-                <li class={elementStyles}>
-                    <JavascriptIcon /> <span class={titleStyle}>JS</span>
-                </li>
-                <li class={elementStyles}>
-                    <ReactIcon /> <span class={titleStyle}>React</span>
-                </li>
-                <li class={elementStyles}>
-                    <TailwindIcon /> <span class={titleStyle}>Tailwind</span>
-                </li>
-                <li class={elementStyles}>
-                    <AstroIcon /> <span class={titleStyle}>Astro</span>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h3 class="text-2xl font-bold">Backend</h3>
-                  <ul class="flex justify-around mt-4">
-                    <li class={elementStyles}>
-                        <NodeIcon /> <span class={titleStyle}>Node</span>
-                    </li>
-                    <li class={elementStyles}>
-                        <NextIcon /> <span class={titleStyle}>Next</span>
-                    </li>
-                    <li class={elementStyles}>
-                        <PythonIcon /> <span class={titleStyle}>Python</span>
-                    </li>
-                    <li class={elementStyles}>
-                        <DjangoIcon /> <span class={titleStyle}>Django</span>
-                    </li>
-                    <li class={elementStyles}>
-                        <MongoIcon /> <span class={titleStyle}>MongoDB</span>
-                    </li>
-                    <li class={elementStyles}>
-                        <DockerIcon /> <span class={titleStyle}>Docker</span>
-                    </li>
-            </ul>
+    <h2 class="text-3xl text-bw-500 text-center font-bold mt-20 hover:brightness-150 lg:hidden">
+        Skills
+    </h2>
+    <div class="hidden justify-around gap-8 lg:grid lg:grid-cols-2">
+        <h2 class=" text-3xl text-bw-500 text-center font-bold mt-20 hover:brightness-150">
+            <span class="text-1">Frontend skills</span>
+        </h2>
+        <h2 class="text-3xl text-bw-500 text-center font-bold mt-20 hover:brightness-150">
+            <span class="text-2">Backend skills</span>
+        </h2>
+    </div>
+    <div class="grid mt-4 gap-8 lg:grid-cols-2">
+        <ul class="flex justify-around items-center mt-6 skill-list-1">
+            <li class={elementStyles}>
+                <HTMLIcon /> <span class={titleStyle}>HTML</span>
+            </li>
+            <li class={elementStyles}>
+                <CSSIcon /> <span class={titleStyle}>CSS</span>
+            </li>
+            <li class={elementStyles}>
+                <JavascriptIcon /> <span class={titleStyle}>JS</span>
+            </li>
+            <li class={elementStyles}>
+                <ReactIcon /> <span class={titleStyle}>React</span>
+            </li>
+            <li class={elementStyles}>
+                <TailwindIcon /> <span class={titleStyle}>Tailwind</span>
+            </li>
+            <li class={elementStyles}>
+                <AstroIcon /> <span class={titleStyle}>Astro</span>
+            </li>
+        </ul>
+        <ul class="flex justify-around mt-6 skill-list-2">
+            <li class={elementStyles}>
+                <NodeIcon /> <span class={titleStyle}>Node</span>
+            </li>
+            <li class={elementStyles}>
+                <NextIcon /> <span class={titleStyle}>Next</span>
+            </li>
+            <li class={elementStyles}>
+                <PythonIcon /> <span class={titleStyle}>Python</span>
+            </li>
+            <li class={elementStyles}>
+                <DjangoIcon /> <span class={titleStyle}>Django</span>
+            </li>
+            <li class={elementStyles}>
+                <MongoIcon /> <span class={titleStyle}>MongoDB</span>
+            </li>
+            <li class={elementStyles}>
+                <DockerIcon /> <span class={titleStyle}>Docker</span>
+            </li>
+    </ul>
 </section>
+
+<style>
+    .text-1 {
+        animation: text1;
+      }
+      .text-2 {
+        animation: text2;
+      }
+      .text-1,
+      .text-2 {
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        position: relative;
+      }
+
+      .skill-list {
+        animation: text1;
+    }
+
+    .text-1, .text-2, .skill-list-1, .skill-list-2 {
+        animation-duration: 10s;
+        animation-timing-function: steps(30, end);
+        animation-iteration-count: infinite;
+      }
+      
+      @keyframes text1 {
+        
+      } {
+        0%,
+        50%,
+        100% {
+          width: 0;
+        }
+        10%,
+        40% {
+          width: 10em;
+        }
+      }
+
+      @keyframes text2 {
+        0%,
+        50%,
+        100% {
+          width: 0;
+        }
+        60%,
+        90% {
+          width: 10em;
+        }
+      }
+
+</style>

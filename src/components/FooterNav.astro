@@ -1,11 +1,20 @@
 ---
+//import ProfileIcon from '../icons/ProfileIcon.astro';
+//import BlogIcon from '../icons/BlogIcon.astro';
+//import PortfolioIcon from '../icons/PortfolioIcon.astro';
 ---
 
-<nav class="hidden md:block lg:mx-20">
-    <div class="flex justify-around py-auto">
-        <h2 class="text-2xl font-bold text-lapislazuli-400 opacity-25 cursor-pointer hover:text-3xl hover:opacity-100">Blog</h2>
-        <h2 class="text-3xl font-bold text-steelBlue-500 cursor-pointer">About Me</h2>
-        <h2 class="text-2xl font-bold text-lapislazuli-400 opacity-25 cursor-pointer hover:text-3xl hover:opacity-100">ContactMe</h2>
-    </div>
-    </div>
+<nav class="grid grid-cols-3 text-center py-auto">
+    <h2 class="text-2xl font-bold text-lapislazuli-400 opacity-25 cursor-pointer hover:opacity-100 lg:hover:-translate-y-2">
+        <!--BlogIcon /-->
+        Blog
+    </h2>
+    <h2 class="text-3xl font-bold text-steelBlue-500 cursor-pointer lg:hover:-translate-y-2">
+        <!--ProfileIcon /-->
+        About Me
+    </h2>
+    <h2 class="text-2xl font-bold text-lapislazuli-400 opacity-25 cursor-pointer hover:opacity-100 lg:hover:-translate-y-2">
+        <!--PortfolioIcon /-->
+        Portfolio
+    </h2>
 </nav>
