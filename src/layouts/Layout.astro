@@ -14,17 +14,12 @@ import FooterNav from '../components/FooterNav.astro';
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> <!-- Swiper Stylesheet -->
-		<script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-		<meta name="generator" content={Astro.generator} />
 		<title>Paulo Panduro</title>
 	</head>
 	<body class="min-h-screen left-0 top-0 bg-gradient-to-br from-bw-950 to-steelBlue-950 font-sans">
 		<Header/>
-		<main class="mx-auto text-center text-bw-100">
-			<div class="[grid-area:page-content] h-[85vh] p-4 lg:px-20">
-				<slot />
-			</div>
+		<main class="mx-auto [grid-area:page-content] h-[85vh] p-4 text-center text-bw-100 lg:px-20">
+			<slot />
 		</main>
 		<footer class="[grid-area:pages-nav] hidden fixed h-20 w-full left-0 bottom-0 justify-center p-4 lg:block lg:px-20">
 			<FooterNav/>
