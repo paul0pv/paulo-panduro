@@ -15,8 +15,8 @@ const elementStyles = "text-lg grid font-bold justify-center items-center text-c
 const titleStyle = "hidden md:block"
 ---
 
-<div class="h-1/3">
-    <h2 class="text-3xl text-kakhi-300 text-center font-bold mt-20 lg:hidden">
+<div class="hidden h-1/3 flex-col justify-evenly md:flex">
+    <h2 class="text-3xl text-kakhi-300 text-center font-bold lg:hidden">
         Skills
     </h2>
     <div class="hidden justify-around gap-8 lg:grid lg:grid-cols-2">
@@ -28,7 +28,7 @@ const titleStyle = "hidden md:block"
         </h2>
     </div>
     <div class="grid mt-4 gap-8 lg:grid-cols-2">
-        <ul class="flex justify-around items-center mt-6 skill-list-1">
+        <ul class="flex justify-around items-center mt-6">
             <li class={elementStyles}>
                 <HTMLIcon /> <span class={titleStyle}>HTML</span>
             </li>
