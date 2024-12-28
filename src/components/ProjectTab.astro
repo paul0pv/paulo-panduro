@@ -10,13 +10,15 @@ const { id, title, description, tools, learning, link } = project;
 
 ---
 
-<article class="flex flex-col items-start bg-lapislazuli-600 text-bw-200 p-6 rounded-md shadow-lg">
-        <h3 class="text-xl font-bold mb-2">{title}</h3>
+<article class="hidden relative bg-lapislazuli-600 text-bw-200 my-6 py-7 px-4 rounded-md shadow-lg md:flex md:flex-col">
+    <div class="absolute -top-5 left-0 bg-lapislazuli-600 w-1/5 h-8 rounded"></div>
+    <div class="absolute -top-3 right-1 bg-bw-300 w-4/5 h-8 rounded-sm z-[-1]"></div>
+        <h3 class="text-xl font-bold mb-4">{title}</h3>
         <p class="text-bw-400">{description}</p>
         <!--div class="flex gap-2 justify-evenly mt-4">
             {tools.map((tool: string) => (
                 <span class="bg-steelBlue-900 text-white px-2 py-1 rounded-2xl text-sm">{tool}</span>
             ))}
         </div-->
-        <a href={link} target="_blank" class="text-blue-500 hover:underline mt-4 block">View Project</a>
-    </article>
+        <a href={link} target="_blank" class="absolute bottom-0 mb-4 text-blue-500 hover:underline">{`>> View Project <<`}</a>
+</article>

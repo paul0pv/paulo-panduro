@@ -1,0 +1,72 @@
+---
+import ProjectTab from "../components/ProjectTab.astro"
+import GitHubIcon from "../components/icons/GitHubIcon.astro";
+import RocketIcon from "../components/icons/RocketIcon.astro";
+import { projects } from "../lib/data";
+const project = projects[0];
+---
+
+  <section class="h-screen pt-20 grid">
+    <h2 class="about-title text-4xl flex mt-4">Projects</h2>
+    <div class="pages-viewer">
+      <article class="[grid-area: current-content] gap-6 bg-lapislazuli-700">
+        <div class="h-4/6 w-full flex items-center justify-center bg-pictonBlue-700">
+          <img src="/U-connect.png" alt="U-connect first page" class="max-w-[70%] max-h-full object-scale-down shadow-lg"/>
+        </div>
+        <div class="h-2/6 flex flex-col items-start gap-6 p-4">
+          <h1 class="text-3xl font-semibold">{project.title}</h1>
+        <p class="text-[17px]">{project.description}</p>
+        <ul class="flex justify-around gap-3 p-2">
+          {project.tools.map((tool) => (
+            <li><span class="bg-pictonBlue-900 text-white px-3 py-1 rounded-2xl text-sm">{tool}</span></li>
+          ))}
+        </ul>
+        <div class="w-full flex justify-start mt-1 gap-4">
+          <a href={project.github} class="flex gap-2 py-2 px-4 rounded-md bg-bw-700 hover:bg-bw-600">
+            <GitHubIcon />
+            Github
+          </a>
+          <a href={project.link} class="flex gap-2 py-2 px-4 rounded-md bg-steelBlue-700 hover:bg-pictonBlue-700">
+            <RocketIcon />
+            Demo
+          </a>
+        </div>
+        </div>
+      </article>
+      <aside class="[grid-area: aside] flex flex-col justify-between px-4">
+        <div class="grid h-[95%]">
+          {projects.map((project) => (
+            <ProjectTab project={project} />
+          ))}
+        </div>
+        <button class="bg-none text-bw-600 underline underline-offset-2 my-auto">More Projects {">>"}</button>
+      </aside>
+    </div>
+</section>
+
+    <style>
+      .pages-viewer{
+        display: grid;
+        grid-template-areas: 
+        "current-content aside";
+        grid-template-columns: 1fr 350px;
+        grid-template-rows: 80vh;
+    
+      }
+
+      @media screen and (max-width: 768px){
+        .pages-viewer {
+          /*display: inline;
+          height: 80vh;
+          justify-content: center;
+          margin: auto;
+          padding: auto;*/
+          grid-template-areas: 
+        "current-content"
+        "aside";
+        grid-template-columns: 1fr;
+        grid-template-rows: 80vh auto;
+        }
+      }
+
+  </style>

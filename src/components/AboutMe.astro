@@ -1,17 +1,23 @@
 ---
+import SkillsSection from '../components/SkillsSection.astro';
+import GitHubIcon from '../components/icons/GitHubIcon.astro';
+import LinkedinIcon from '../components/icons/LinkedinIcon.astro';
 ---
 
-<section class="flex flex-col mt-8 mx-4 lg:mt-20 lg:mx-20">
-	<div>
-		<img src="/profile.jpeg" alt="profile-photo" class="w-48 h-48 rounded-full mx-auto shadow-lg border-4 border-white hover:border-pictonBlue-700">
+<section class="flex flex-col h-screen pt-24 my-auto justify-evenly">
+	<div class="max-w-xl mx-auto text-center">
+		<div class="mb-4">
+			<img src="/profile.jpeg" alt="profile-photo" class="w-48 h-48 rounded-full mx-auto shadow-lg border-[1px] border-kakhi-800"/>
+		</div>
+		<h1 class="about-title text-5xl">Paulo Panduro</h1>
+		<h4 class="text-2xl font-bold my-3">The code never sleeps, but I do sometimes.</h4>
+		<p class="mt-4 text-gray-400 text-center">Welcome to my personal website! I'm a web developer passionate about creating efficient and scalable applications. Always looking for new challenges and opportunities to learn something new. 
+		</p>
+		<p class="text-kakhi-400 font-semibold lg:mt-2">About my dev path:</p>
+		<div class="mt-6 flex justify-center gap-4">
+			<a href="https://github.com/paul0pv" target="_blank" class="flex gap-2 bg-bw-700 hover:bg-bw-600 text-bw-100 font-medium py-2 px-4 rounded-md"><GitHubIcon /> GitHub</a>
+			<a href="https://www.linkedin.com/in/paulo-gonzalo-panduro-vasquez-746394143" target="_blank" class="flex gap-2 bg-steelBlue-700 hover:bg-pictonBlue-700 text-bw-100 font-medium py-2 px-4 rounded-md"><LinkedinIcon /> LinkedIn</a>
+		</div>
 	</div>
-	<h1 class="text-5xl mt-4 font-bold">Paulo Panduro</h1>
-	<h4 class="text-2xl font-bold mt-3">The code never sleeps, but I do sometimes.</h4>
-	<p class="mt-4 text-gray-400 max-w-xl mx-auto">Welcome to my personal website! I'm a web developer passionate about creating efficient and scalable applications. Always looking for new challenges and opportunities to learn something new. 
-	</p>
-	<p class="text-bw-50 font-semibold mt-2">About my projects:</p>
-	<div class="mt-6 flex justify-center gap-4">
-		<a href="https://github.com/paul0pv" target="_blank" class="flex items-center justify-between gap-2 bg-bw-800 hover:bg-bw-700 text-bw-100 font-medium px-6 py-2 rounded-full"><img src="/github-dark.svg" class="w-4 h-4"/> GitHub</a>
-		<a href="https://www.linkedin.com/in/paulo-gonzalo-panduro-vasquez-746394143" target="_blank" class="flex items-center justify-between gap-2 bg-steelBlue-700 hover:bg-pictonBlue-700 text-bw-100 font-medium px-6 py-2 rounded-full"><img src="/linkedin.svg" class="w-4 h-4"/> LinkedIn</a>
-	</div>
+	<SkillsSection />
 </section>

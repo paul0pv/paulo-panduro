@@ -1,24 +1,40 @@
 ---
-import AddressIcon from './icons/AddressIcon.astro'
 ---
 
-<header class="bg-bw-900 bg-opacity-35 p-4 shadow-sm lg:px-20">
+<header class="fixed left-0 top-0 bg-bw-900 bg-opacity-35 w-full p-4 shadow-sm z-10 lg:px-20" id="header">
     <nav class="flex justify-between items-center">
-        <div class=" text-bw-100 hover:text-pictonBlue-400">
-            <a href="/">
-                <h4 class="text-3xl font-bold">
-                    PP
-                </h4>
-            </a>
-        </div>
-        <div class="text-bw-100">
-            <ul>
-                <li>
-                    <a href="/projects" class="flex gap-2">
-                        <AddressIcon/> <span class="font-semibold">Contact</span>
-                    </a>
-                </li>
-            </ul>    
-        </div>  
+        <a href="/">
+            <h4 class="header-title text-3xl font-bold">
+                PP
+            </h4>
+        </a>
+        <ul class="flex justify-between text-kakhi-400 w-32">
+            <li>
+                <a href="/projects" class="flex">
+                    <span class="font-semibold hover:brightness-125">Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="/projects" class="flex">
+                    <span class="font-semibold hover:brightness-125">Contact</span>
+                </a>
+            </li>
+        </ul>     
     </nav>
 </header>
+
+<style>
+    .header-title {
+        color: #7FCFFF;
+        /*transition: all 0.5s ease-out;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;*/
+    }
+
+	.header-title:hover {
+		color: transparent;
+		background-clip: text;
+		background-image: linear-gradient(to right, #7FCFFF, #B2E1FF);
+	}
+</style>
